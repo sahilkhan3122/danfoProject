@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.tripdetail.TripDetailActivity">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/activity_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_75dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_ride_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <fragment
+                            android:id="@+id/map123"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_150sdp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <include
+                            android:id="@+id/pickup"
+                            layout="@layout/layout_pickup_dropoff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_tripId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/back_btn_round_black"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:paddingVertical="@dimen/_5sdp"
+                            android:text="ID: 123252345564"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/tv_date_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="end"
+                            android:text="12 Jan 2021, 5:35 pm"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_10sdp"
+                            tools:ignore="TextSizeCheck" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <include
+                            android:id="@+id/tripPrice"
+                            layout="@layout/layout_trip_time_price_earning" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPackageName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:singleLine="true"
+                    android:visibility="visible"
+                    android:text="@string/package_name"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvEquipmentList"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_ride_details"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <LinearLayout
+                    android:id="@+id/llInvoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/bg_black_line_border"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_50sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/ic_invoice" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:singleLine="true"
+                        android:text="@string/invoice"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_11sdp"
+                        tools:ignore="TextSizeCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llUpcomingTrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/bg_ride_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivProfile"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/ic_launcher"
+                            app:civ_border_width="1px" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_UserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:singleLine="true"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/_12sp"
+                                tools:ignore="TextSizeCheck"
+                                tools:text="Johnnes Smith" />
+
+                            <LinearLayout
+                                android:id="@+id/llCustomerRating"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:singleLine="true"
+                                    android:text="@string/yor_rated"
+                                    android:textColor="@color/color_gray"
+                                    android:textSize="@dimen/_12sdp"
+                                    tools:ignore="TextSizeCheck" />
+
+                                <RatingBar
+                                    android:id="@+id/ratingBar"
+                                    style="@style/CustomRatingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:isIndicator="true"
+                                    android:isScrollContainer="false"
+                                    android:numStars="5"
+                                    android:rating="3"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvYourDriver"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:singleLine="true"
+                                android:text="@string/your_rider"
+                                android:textColor="@color/color_gray"
+                                android:textSize="@dimen/_12sdp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/llAcceptReject"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tv_reject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_red_line_border"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:gravity="center"
+                                android:paddingVertical="@dimen/_8sdp"
+                                android:text="@string/reject"
+                                android:textColor="@color/red_dark"
+                                android:textSize="@dimen/_14sdp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tv_accept"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/back_btn_round_black"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:gravity="center"
+                                android:paddingVertical="@dimen/_8sdp"
+                                android:text="@string/accept"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/back_btn_round_black"
+                            android:paddingVertical="@dimen/_4sdp"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/slideText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_3sdp"
+                                    android:text="@string/slide_to_go"
+                                    android:textColor="@color/colorTextWhite"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <SeekBar
+                                    android:id="@+id/slideSeek"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:clickable="false"
+                                    android:max="100"
+                                    android:progressDrawable="@android:color/transparent"
+                                    android:thumb="@drawable/ic_slide_arrow" />
+
+                                <!--android:progressDrawable="@android:color/transparent"-->
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/llCustomerContact"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <com.google.android.material.imageview.ShapeableImageView
+                                        android:id="@+id/iv_CustomerCall"
+                                        android:layout_width="@dimen/_35sdp"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:src="@drawable/ic_call"
+                                        android:visibility="visible" />
+
+                                    <com.google.android.material.imageview.ShapeableImageView
+                                        android:id="@+id/iv_Chat"
+                                        android:layout_width="@dimen/_35sdp"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:layout_marginHorizontal="20dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/ic_message"
+                                        android:visibility="visible" />
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/tvNeedHelp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_black_line_border"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:gravity="center"
+                                    android:paddingVertical="@dimen/_8sdp"
+                                    android:text="@string/need_help"
+                                    android:textColor="@color/theme_color"
+                                    android:textSize="@dimen/_14sdp"
+                                    tools:ignore="TextSizeCheck" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

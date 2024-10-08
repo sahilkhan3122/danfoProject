@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/ic_location_pin" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dash_line_set_verticle"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginVertical="@dimen/_2sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/pickupdata"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorThemeGray"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/montserrat_regular" />
+
+                <TextView
+                    android:id="@+id/tv_pickupLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="821 South St, Mabopane"
+                    android:textAllCaps="false"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_marginTop="@dimen/_3sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/black"
+                    android:layout_marginVertical="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ic_location_pin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/drop_off_data"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorThemeGray"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/montserrat_regular" />
+
+                <TextView
+                    android:id="@+id/tv_drop_off_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="1522 Telford Ave, Jan Kempdorp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_marginTop="@dimen/_3sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.wallet.WalletActivity">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/activity_header" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srlWallet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_100dp"
+                    android:background="@drawable/bg_ride_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/your_wallet_balance"
+                        android:textColor="@color/colorThemeGray"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="TextSizeCheck" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_WalletBallence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/_89_00"
+                        android:textAlignment="center"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_22sdp" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvWalletUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/llSavingPercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/saving_wallet_percentage"
+                                android:textColor="@color/colorThemeGray"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:textColor="@color/theme_color"
+                                android:textSize="16sp"
+                                tools:text="5%" />
+
+                            <TextView
+                                android:id="@+id/tvChange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/change_ul"
+                                android:textColor="@color/withdraw_color"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvWithdraw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/withdraw"
+                        android:textColor="@color/colorThemeGray"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/btnWalletSetup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/bg_wallet_add_money"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_wallet_active"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/activate_your_wallet"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/walletMenu"
+                        layout="@layout/wallet_menu_item"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/llViewMoreSavingWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvViewMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:gravity="center"
+                            android:text="@string/view_more"
+                            android:textColor="@color/withdraw_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:gravity="center"
+                            android:text="@string/more_information_about"
+                            android:textColor="@color/colorThemeGray"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/history"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_20sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/bg_ride_details"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_transferHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        android:paddingVertical="@dimen/_15sdp"
+                        android:visibility="visible"
+                        tools:listitem="@layout/item_wallet_history" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvNoDataFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:text="@string/no_history_found"
+                        android:textColor="@color/colorThemeGray"
+                        android:textSize="@dimen/edittext_size"
+                        android:visibility="gone" />
+                </LinearLayout>
+                <include
+                    android:id="@+id/sendMoney"
+                    layout="@layout/dialog_send_money"
+                    android:visibility="visible" />
+
+                <include
+                    android:id="@+id/confirmPayment"
+                    layout="@layout/dialog_confirm_payment"
+                    android:visibility="visible" />
+
+                <include
+                    android:id="@+id/addMoney"
+                    layout="@layout/dialog_add_money"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+       <!-- </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

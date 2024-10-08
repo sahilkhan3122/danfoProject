@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "597729746409",
+    "project_id": "showfadriverletest",
+    "storage_bucket": "showfadriverletest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597729746409:android:c6af4282c4c90e2b8d7f78",
+        "android_client_info": {
+          "package_name": "com.example.showfadriverletest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597729746409-6q0lthjanvv43610cihbcunntjphibij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.showfadriverletest",
+            "certificate_hash": "1b2e4cae300d4c8fde0acdc6249fac13b40f42a3"
+          }
+        },
+        {
+          "client_id": "597729746409-j0j1n80e62i26b00ja0q8krosimasqko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6LLRz6GaoYtGzpSedzAxhmJq3w_XTUzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597729746409-j0j1n80e62i26b00ja0q8krosimasqko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

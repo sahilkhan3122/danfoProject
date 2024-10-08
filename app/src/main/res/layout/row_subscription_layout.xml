@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_row_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_25sdp"
+            android:background="@drawable/bg_card_black"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:background="@drawable/design_card_corner_square"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_minus40sdp"
+                    android:layout_marginRight="@dimen/_minus40sdp" />
+
+                <View
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:background="@drawable/design_card_corner_square"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_minus20sdp"
+                    android:layout_marginRight="@dimen/_minus20sdp" />
+
+                <View
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:background="@drawable/design_card_corner_square"
+                    android:layout_alignParentRight="true" />
+
+                <View
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:background="@drawable/design_card_corner_square"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_20sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_14sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="Test 1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_6sdp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_30sdp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            tools:text="$999" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvSubscriptionType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="daily" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorTransparentHalfWhite"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        tools:text="Test Description" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSubscribeNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:background="@drawable/bg_chat_edit_text"
+                        android:text="@string/subscription_now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/montserrat_semi_bold" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

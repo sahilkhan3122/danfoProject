@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="customTypeFaceTv" format="string" />
+        <attr name="prefixTag" format="string" />
+        <attr name="postfixTag" format="string" />
+    </declare-styleable>
+    <declare-styleable name="CustomRadioButton">
+        <attr name="typeFaceRb" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditTextView">
+        <attr name="customTypeFaceEt" format="string" />
+        <attr name="minCount" format="integer" />
+        <attr name="maxCount" format="integer" />
+        <attr name="etRestriction" format="boolean" />
+        <attr name="prefixEt" format="string" />
+    </declare-styleable>
+    <declare-styleable name="EwSpinner">
+        <attr name="spItemText" format="reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/clStartRideRootStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:id="@+id/bsVerifyCustomer"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp">
+
+        <!--app:behavior_hideable="false"
+        app:behavior_peekHeight="@dimen/_75sdp"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/driver_status_bg"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_3sdp"
+                android:src="@drawable/ic_dialog_line"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageView
+                android:id="@+id/ivCloseVerifyCustomerOTPDialog"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:visibility="gone"
+                android:src="@drawable/ic_close_circle"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/tvOtpDialogTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/title_verify_customer_otp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_semi_bold" />
+
+            <TextView
+                android:id="@+id/tv_Message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/color_gray"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="@string/desc_verify_customer_otp_start"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_customer_request"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/llRideDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/etEnterCustomerOTP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:hint="@string/enter_start_code"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/theme_color"
+                        android:textColorHint="@color/color_gray"
+                        android:textSize="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:singleLine="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <TextView
+                        android:id="@+id/bt_SubmitOTP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/submit"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="@color/colorTextWhite"
+                        android:background="@drawable/back_btn_round_black"
+                        android:padding="@dimen/_9sdp"
+                        android:gravity="center"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:layout_marginBottom="@dimen/_20sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

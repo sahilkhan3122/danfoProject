@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/llLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_black_line_border"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_40sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="logOut"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_semi_bold"/>
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_logout"
+            android:layout_marginStart="@dimen/_20sdp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDeleteMyAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/montserrat_regular"
+        android:padding="@dimen/_6sdp"
+        android:textSize="14sp"
+        android:text="@string/lbl_delete_my_account"
+        android:textColor="@color/colorRed"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center_horizontal"
+        android:textSize="14sp"
+        android:text="@string/lbl_delete_my_account"
+        android:textColor="@color/colorBlack"
+        android:visibility="visible" />
+
+</LinearLayout>
+

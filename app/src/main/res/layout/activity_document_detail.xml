@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.register.registerprofile.DocumentDetail">
+
+        <include
+            android:id="@+id/activity_header"
+            layout="@layout/activity_header" />
+
+
+        <DatePicker
+            android:id="@+id/date_Picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_header" />
+
+        <ScrollView
+            android:id="@+id/Scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_75dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_header">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_20dp"
+                android:paddingBottom="@dimen/dims_400dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_vehicle_details_title"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:inputType="textCapWords|text"
+                    android:padding="@dimen/_15dp"
+                    android:text="@string/driver_details"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_18dp" />
+
+                <!--National Id-->
+                <LinearLayout
+                    android:id="@+id/ll_national_id_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/national_id"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp"
+                        tools:ignore="TextSizeCheck" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvNationalIdDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text"
+                            android:onClick="attachDocument"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp"
+                            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/ivEditNationalId"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="updateUploadImage"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etNationalID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5dp"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:hint="@string/enter_national_id_number"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:paddingVertical="@dimen/_5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/theme_color"
+                            android:textColorHint="@color/color_gray"
+                            android:textSize="@dimen/_15sp"
+                            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/theme_color" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Driver Licence-->
+                <LinearLayout
+                    android:id="@+id/ll_driver_licence_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDriverLicence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:inputType="textCapWords|text"
+
+                        android:text="@string/driver_licence_fromt_only"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp"
+                        tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:id="@+id/llDriverLicenceDoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <TextView
+                            android:id="@+id/tvDriverLicenceDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text"
+                            android:onClick="attachDocument"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp"
+                            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/ivEditDriverLicence"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="updateUploadImage"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llDriverLicenceDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvDriverLicenceExpDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:hint="Select Expiery Date"
+                                android:onClick="setExpiryDate"
+                                android:text=""
+                                android:textColor="@color/docs_color"
+                                android:textColorHint="@color/docs_color"
+                                android:textSize="@dimen/_15sp"
+                                tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvDriverLicenceDocStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:text="@string/expired"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/_12dp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--NTSA Budge Certificate-->
+                <LinearLayout
+                    android:id="@+id/ll_ntsa_budge_certificate_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvNtsaBudgeCertificate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:inputType="textCapWords|text"
+                        android:text="@string/ntsa_budge_sertificate"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp"
+                        tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:id="@+id/llNTSABudgeCertificateDoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvNTSABudgeCertificateDoc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text|textMultiLine"
+                            android:onClick="attachDocument"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp"
+                            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/ivEditNTSABudgeCertificate"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="updateUploadImage"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llNTSABudgeCertificateDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvNTSABudgeCertificateExpDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:hint="@string/select_expiery_date"
+                                android:onClick="setExpiryDate"
+                                android:text=""
+                                android:textColor="@color/docs_color"
+                                android:textColorHint="@color/docs_color"
+                                android:textSize="@dimen/_15sp"
+                                tools:ignore="TextSizeCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvNTSABudgeCertificateDocStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:text="@string/expired"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/_15sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Driver PSV Licence-->
+                <LinearLayout
+                    android:id="@+id/ll_driver_psv_licence_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:inputType="textCapWords|text"
+                        android:text="@string/driver_psv_licence_number"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvDriverPSVLicenceDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditDriverPSVLicence"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llDriverPSVLicenceDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvDriverPSVLicenceExpDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:hint="@string/select_expiery_date"
+                                android:text=""
+                                android:textColor="@color/docs_color"
+                                android:textColorHint="@color/docs_color"
+                                android:textSize="@dimen/_15sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvDriverPSVLicenceDocStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:text="@string/expired"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/_15sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Good Conduct - Police Receipt-->
+                <LinearLayout
+                    android:id="@+id/ll_police_receipt_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/good_conduct_certificate"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp"
+                        tools:ignore="TextSizeCheck" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvPoliceReceiptDoc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text|textMultiLine"
+                            android:onClick="attachDocument"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp"
+                            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/ivEditPoliceReceipt"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="updateUploadImage"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_vehicle_details_title"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:inputType="textCapWords|text"
+                    android:padding="@dimen/_15dp"
+                    android:text="@string/vehicle_detail"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_18dp" />
+
+                <!--Vehicle PSV Licence-->
+                <LinearLayout
+                    android:id="@+id/ll_vehicle_psv_licence_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:inputType="textCapWords|text"
+                        android:text="@string/vehicle_psv_licence_document"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvVehiclePSVLicenceDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditVehiclePSVLicence"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llVehiclePSVLicenceDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvVehiclePSVLicenceExpDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:hint="@string/select_expiery_date"
+                                android:text=""
+                                android:textColor="@color/docs_color"
+                                android:textColorHint="@color/docs_color"
+                                android:textSize="@dimen/_15sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_10dp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_calendar_black"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvVehiclePSVLicenceDocStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:text="@string/expired"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/_15sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Log Book-->
+                <LinearLayout
+                    android:id="@+id/ll_log_book_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:inputType="textCapWords|text"
+                        android:text="Vehicle Log Book"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp"
+                        tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvVehicleLogBookDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text"
+                            android:onClick="attachDocument"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp"
+                            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/ivEditVehicleLogBook"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="updateUploadImage"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--NTSA Inspection-->
+                <LinearLayout
+                    android:id="@+id/ll_ntsa_Inspection_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:inputType="textCapWords|text"
+
+                        android:text="@string/ntsa_inspection_document"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvNTSAInspectionDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text"
+                            android:onClick="attachDocument"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/ivEditNTSAInspection"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="updateUploadImage"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llNTSAInspectionDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvNSTAInspectionExpDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:hint="@string/select_expiery_date"
+                                android:onClick="setExpiryDate"
+                                android:text=""
+                                android:textColor="@color/docs_color"
+                                android:textColorHint="@color/docs_color"
+                                android:textSize="@dimen/_15sp"
+                                tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+                            <ImageView
+                                android:id="@+id/ivNTSACalander"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_10dp"
+                                android:adjustViewBounds="true"
+                                android:onClick="updateUploadImage"
+                                android:src="@drawable/ic_calendar_black"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvNTSAInspectionExpStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:text="@string/expired"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/_15sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--PSV Comprehensive Insurance-->
+                <LinearLayout
+                    android:id="@+id/ll_psv_comprehensive_insurance_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/bg_vehicle_details"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:inputType="textCapWords|text"
+                        android:text="@string/psv_comprehensive_insurance_document"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_15sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/theme_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_attach_file" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvPSVComprehensiveInsuranceDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="textCapWords|text"
+                            android:onClick="attachDocument"
+                            android:text="@string/attach_document"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_15sp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditPSVComprehensiveInsuranceDoc"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="updateUploadImage"
+                            android:src="@drawable/ic_edit_profile"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llPSVComprehensiveInsuranceDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvPSVComprehensiveInsuranceExpDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:hint="@string/select_expiery_date"
+                                android:onClick="setExpiryDate"
+                                android:text=""
+                                android:textColor="@color/docs_color"
+                                android:textColorHint="@color/docs_color"
+                                android:textSize="@dimen/_15sp" />
+
+                            <ImageView
+                                android:id="@+id/ivPSVBadgeCalander"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_10dp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_calendar_black"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvPSVComprehensiveInsuranceStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:text="@string/expired"
+                                android:textColor="@color/colorRed"
+                                android:textSize="@dimen/_15sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_Save"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_marginVertical="@dimen/_30dp"
+                    android:layout_marginBottom="@dimen/_100dp"
+                    android:background="@drawable/back_btn_round_black"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_10dp"
+                    android:text="@string/lbl_save"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15sp" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

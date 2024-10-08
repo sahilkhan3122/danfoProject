@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.cardselect.CardSelection">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/activity_header" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_75dp">
+
+        <LinearLayout android:visibility="gone"
+            android:id="@+id/llCards"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/bg_ride_details"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/theme_color"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/ic_cards" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:gravity="start"
+                android:text="@string/cards_upcoming"
+                android:textAllCaps="false"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat_regular" />
+
+        </LinearLayout>
+
+        <!--Jambo Pay-->
+        <LinearLayout android:visibility="gone"
+            android:id="@+id/llJambopay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_ride_details"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="@id/llCards"
+            app:layout_constraintStart_toStartOf="@id/llCards"
+            app:layout_constraintTop_toBottomOf="@id/llCards">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="15dp"
+                android:src="@drawable/ic_combine_payment" />
+
+            <TextView android:visibility="gone"
+                android:id="@+id/tvPaymentTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:gravity="start"
+                android:text="@string/payment_method_jambopay"
+                android:textAllCaps="false"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat_regular" />
+
+        </LinearLayout>
+
+        <!--M-Pesa-->
+        <LinearLayout android:visibility="visible"
+            android:id="@+id/llMPesa"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/bg_ride_details"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="@id/llCards"
+            app:layout_constraintStart_toStartOf="@id/llCards"
+            app:layout_constraintTop_toBottomOf="@id/llJambopay">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_23sdp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/ic_m_pesa" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:gravity="start"
+                android:text="@string/m_pesa_cap"
+                android:textAllCaps="false"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat_regular" />
+
+        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

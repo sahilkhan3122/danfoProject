@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/clStartRideRootStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:id="@+id/llDriverStatusInfo"
+            android:layout_marginHorizontal="@dimen/_20sdp">
+
+            <ImageView
+                android:id="@+id/reset_current_location"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_location_one"
+                android:layout_gravity="end"
+                android:layout_marginBottom="@dimen/_20sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_25dp"
+                android:background="@drawable/driver_status_bg"
+                android:id="@+id/llDriverStatus"
+                android:paddingHorizontal="@dimen/_30sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/tv_DriverStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_re_offline"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_22sdp"
+                        android:gravity="start"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:layout_weight="1" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_online"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        app:theme="@style/Color1SwitchStyle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTodaysEarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingBottom="@dimen/_20sdp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/colorThemeGray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/your_todays_earning"
+                            android:textAllCaps="false"
+                            android:textColor="@color/color_gray"
+                            android:textSize="@dimen/_14sdp"
+                            android:gravity="start"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tvSeeMoreRide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/see_more"
+                            android:textAllCaps="false"
+                            android:textColor="@color/color_gray"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="start"
+                            android:fontFamily="@font/montserrat_semi_bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_TotalEarning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="$50.9"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_25sdp"
+                        android:gravity="start"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:layout_marginTop="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

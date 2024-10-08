@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+            <variable
+                name="viewModel"
+                type="com.example.showfadriverletest.fragment.viewmodel.PastViewModel" />
+
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/framePast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.PastFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNoDataFound"
+            android:layout_gravity="center"
+            android:text="@string/no_data_found"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/theme_color"
+            android:visibility="gone"
+            android:layout_height="@dimen/_45dp"
+            tools:ignore="RtlCompat" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pastTripRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="5"
+            android:layout_marginBottom="@dimen/_20dp"
+            tools:listitem="@layout/item_past_trip_detail"/>
+
+
+    </FrameLayout>
+</layout>

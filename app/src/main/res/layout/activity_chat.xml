@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.showfadriverletest.ui.chat.ChatViewModel" />
+    </data>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.showfa_passenger_android_kotlin.project.ui.chatActivity.ChatActivity">
+
+            <include
+                android:id="@+id/chatToolbar"
+                layout="@layout/item_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatHistoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_580sdp"
+                android:padding="@dimen/_10dp"
+                app:layout_constraintBottom_toTopOf="@+id/chatMessageCardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatToolbar"
+                tools:listitem="@layout/item_chat_list" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/chatMessageCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/chatContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtMessage"
+                        android:layout_width="@dimen/dimen0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/transparent"
+                        android:hint="@string/message"
+                        android:padding="10dp"
+                        android:textColor="@color/theme_color"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toStartOf="@id/imgSendMessage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgSendMessage"
+                        android:layout_width="50dp"
+                        android:onClick="chatWithCustomer"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="0dp"
+                        android:src="@drawable/t_ic_svg_send"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

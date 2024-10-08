@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.InvoiceActivity"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/activity_header"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp"
+                    android:background="@drawable/bg_ride_details">
+
+                    <include
+                        android:id="@+id/pickupDropOff"
+                        layout="@layout/layout_pickup_dropoff"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp"
+                    android:background="@drawable/bg_ride_details"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <include
+                        android:id="@+id/trpiDetail"
+                        layout="@layout/layout_trip_time_price_earning"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp"
+                    android:background="@drawable/bg_ride_details"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="start"
+                            android:text="@string/date_and_time"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorThemeGray"
+                            android:textSize="@dimen/_14sdp"
+                            tools:ignore="SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTripTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="end"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_14sdp"
+                            tools:ignore="SpUsage,TextSizeCheck"
+                            tools:text="12 Jan 2021, 5:25 pm" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_gray"
+                        android:layout_marginVertical="@dimen/_10sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="start"
+                            android:text="@string/service_type"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorThemeGray"
+                            android:textSize="@dimen/_14sdp"
+                            tools:ignore="SpUsage,TextContrastCheck,TextSizeCheck" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvServiceType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="end"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_14sdp"
+                            tools:ignore="SpUsage,TextSizeCheck"
+                            tools:text="Standard" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_gray"
+                        android:layout_marginVertical="@dimen/_10sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="start"
+                            android:text="@string/vehicle_info"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorThemeGray"
+                            android:textSize="@dimen/_14sdp"
+                            tools:ignore="SpUsage,TextContrastCheck,TextSizeCheck" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="end">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvCarNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:textAllCaps="false"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/_14sdp"
+                                tools:ignore="SpUsage,TextSizeCheck"
+                                tools:text="ND 123 - 456" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvCarName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorThemeGray"
+                                android:textSize="@dimen/_10sdp"
+                                tools:ignore="SpUsage,TextContrastCheck,TextContrastCheck,TextSizeCheck,TextSizeCheck"
+                                tools:text="Hyundai Verna" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvPackageName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:singleLine="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/package_name"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvEquipmentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:background="@drawable/bg_ride_details"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_ride_details_with_border"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent" android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:text="@string/subtotal"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorThemeGray"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                tools:ignore="SpUsage" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvSubTotal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                tools:text="$19.99"
+                                android:textAllCaps="false"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_weight="1"
+                                tools:ignore="SpUsage" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/color_gray"
+                            android:layout_marginVertical="@dimen/_10sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:text="@string/tax"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorThemeGray"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                tools:ignore="SpUsage" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvTax"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                tools:text="$05.00"
+                                android:textAllCaps="false"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_weight="1"
+                                tools:ignore="SpUsage" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/color_gray"
+                            android:layout_marginVertical="@dimen/_10sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:text="@string/booking_fee"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorThemeGray"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                tools:ignore="SpUsage" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvBookingFee"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                tools:text="$11.00"
+                                android:textAllCaps="false"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_weight="1"
+                                tools:ignore="SpUsage" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/color_gray"
+                            android:layout_marginVertical="@dimen/_10sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:text="@string/tip"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorThemeGray"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                tools:ignore="SpUsage" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvTip"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                tools:text="$05.00"
+                                android:textAllCaps="false"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_weight="1"
+                                tools:ignore="SpUsage" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/color_gray"
+                            android:layout_marginVertical="@dimen/_10sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:text="@string/discount"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorThemeGray"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                tools:ignore="SpUsage" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvDiscount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                tools:text="$05.00"
+                                android:textAllCaps="false"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_weight="1"
+                                tools:ignore="SpUsage" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent" android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:background="@drawable/half_circle_left"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/dash_line_horizontal_blue"
+                            android:layout_weight="1"/>
+
+                        <View
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:background="@drawable/half_circle_right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSavingWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/saving_wallet_amount"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_14sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:ignore="SpUsage" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvSavingWalletAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            tools:text="$50.99"
+                            android:textAllCaps="false"
+                            android:textColor="@color/home_accent_thumb"
+                            android:textSize="@dimen/_14sdp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:layout_weight="1"
+                            tools:ignore="SpUsage" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtSavingWalletPerValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:visibility="gone"
+                            tools:text="$50.99"
+                            android:layout_gravity="center_vertical"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_color"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/montserrat_semi_bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_gray"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/total_payable"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/_14sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:ignore="SpUsage" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTotalPayable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            tools:text="$50.99"
+                            android:textAllCaps="false"
+                            android:textColor="@color/home_accent_thumb"
+                            android:textSize="@dimen/_14sdp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

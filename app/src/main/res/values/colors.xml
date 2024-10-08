@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#363435</color> <!--#000000-->
+    <color name="colorPrimaryDark">#363435</color> <!--#a5a5a5-->
+    <color name="colorAccent">#e38428</color> <!--ffffff-->
+    <color name="colorWhiteLow">#c8c6c9</color>
+    <color name="home_accent_thumb">#006CB5</color>
+    <color name="colorThemeDark">#363435</color>
+    <color name="colorThemeLight">#363435</color>
+    <color name="colorSwitchInActive">#363435</color>
+    <color name="colorTextBlack">#363435</color>
+    <color name="colorTransparent">#00121213</color>
+    <color name="dialog_backColor">#40121213</color>
+    <color name="mediumGray1">#727272</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="black_trans">#41000000</color>
+    <color name="home_accent">#A8DCFF</color>
+    <color name="black_33">#333333</color>
+    <color name="color_yellow">#FECD00</color>
+    <color name="colorMyBox">#727272</color>
+    <color name="add_payment">#00BC4C</color>
+    <color name="chartBar1">#50b432</color>
+    <color name="white_transparent">#23FFFFFF</color>
+    <color name="colorTransparentHalfWhite">#80ffffff</color>
+    <color name="lightGray">#cccccc</color>
+    <color name="darkGray">#C6C6C6</color>
+    <color name="colorPickTransparent">#00000000</color>
+    <color name="appPickColor">#e48428</color>
+    <color name="colorPickEtUnderlineOne">#727272</color>
+    <color name="mediumPickGray1">#727272</color>
+    <color name="mediumPickGray2">#525252</color>
+    <color name="colorPickHeaderText">#303030</color>
+    <color name="colorPolyline">#000000</color>
+    <color name="red_dark">#C10A0A</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorMenu">#C7C7C7</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#a5a5a5</color>
+    <color name="colorOrenge">#ffa300</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorLightGray">#e5e5e5</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="quantum_grey">@color/quantum_grey500</color>
+    <color name="quantum_grey500">#9e9e9e</color>
+
+    <color name="theme_colorTransperent">#BF000000</color>
+
+    <color name="colorPoliLine">#363435</color>
+
+    <color name="colorGreen">#53CB3D</color>
+
+    <color name="main_icon_colour">#000000</color>
+
+    <color name="colorBlue">#005bb7</color>
+
+    <color name="colorGrayDark">#4C4D4E</color>
+    <color name="rating_color">#f0c44b</color>
+    <color name="appColor">#363435</color>
+    <color name="bgrectColor">#2d2c2d</color>
+
+    <color name="bookingUnselectedText">#7A7A7C</color>
+    <color name="bookingBoxColor">@color/theme_color</color>
+    <color name="bookingBoxUnSelectColor">#DDDDDD</color>
+    <color name="colorCard11">#FF954F</color>
+    <color name="colorCard111">#FF7167</color>
+    <color name="colorCard12">#FF3A86</color>
+    <color name="colorCard21">#43D2FE</color>
+    <color name="colorBluefb">#6081c4</color>
+    <color name="colorCard211">#34BEFD</color>
+    <color name="colorCard22">#22A5FF</color>
+    <color name="colorCard31">#CA2188</color>
+    <color name="colorCard311">#DF2E65</color>
+    <color name="colorCard32">#F13848</color>
+    <color name="cardDelete">#F92D4E</color>
+    <color name="close_bg_color">#FAF5FF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="half_black">#80000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whitetrans">#B5FFFFFF</color>
+
+    <!-- Custom colors -->
+    <color name="blue">#006CB5</color>
+    <color name="darkBlue">#2680EB</color>
+    <color name="blacktrans">#B3000000</color>
+    <color name="unselected_color">#80000000</color>
+    <color name="semi_blue">#006CB5</color>
+
+    <color name="meter_start_color">#525252</color>
+    <color name="meter_end_color">#CCCCCC</color>
+    <color name="meter_start_color_inner">#333333</color>
+    <color name="meter_end_color_inner">#575757</color>
+    <color name="meter_text_hint">#707070</color>
+
+    <color name="meter_end_color_inner_trans">#9E000000</color>
+
+
+    <color name="colorHintLogin">#8F8FB9</color>
+    <color name="bgColorData">#FAF5FF</color>
+    <color name="placeholder">#8F8FB9</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="docs_color">#006CB5</color>
+    <color name="theme_color">#401B60</color>
+    <color name="sub_theme_color">#FFCA05</color>
+    <color name="vehicle_detail_bg">#FAF5FF</color>
+    <color name="customer_ride_details">#F5F8FF</color>
+    <color name="colorThemeGray">#8F8FB9</color>
+    <color name="theme_color_light">#444477</color>
+    <color name="colorLightTheme">#DDC9EE</color>
+    <color name="color_gray">#B1B1B1</color>
+    <color name="color_gray_dark">#666666</color>
+    <color name="withdraw_color">#2680EB</color>
+    <color name="white_blur_transparent">#881E1E1E</color>
+
+</resources>

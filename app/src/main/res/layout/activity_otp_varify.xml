@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+            <variable
+                name="viewModel"
+                type="com.example.showfadriverletest.ui.otp.viewmodel.ResendOtpViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/mainContainerFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.otp.OtpVerification">
+
+        <LinearLayout
+            android:id="@+id/mainLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/ic_login_header_image"
+                android:minHeight="@dimen/_250dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/welcomeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:text="@string/verify_your_account"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_30sp" />
+
+                    <View
+                        android:layout_marginStart="@dimen/_2dp"
+                        android:layout_width="@dimen/_60dp"
+                        android:layout_height="3dp"
+                        android:background="@color/blue"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_35dp"
+                android:layout_marginTop="@dimen/_35dp"
+                android:layout_marginEnd="@dimen/_35dp"
+                android:orientation="vertical">
+
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginEnd="@dimen/_15dp"
+                    android:layout_marginBottom="@dimen/_30dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:textColor="@color/half_black"
+                    android:text="@string/otp_message"
+                    android:textSize="@dimen/_15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/inputMobileNumber"
+                    android:layout_below="@+id/txtMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    app:boxBackgroundColor="@android:color/transparent">
+
+                    <EditText
+                        android:id="@+id/edtOtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:background="@null"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:hint="@string/lbl_otp"
+                        android:inputType="number"
+                        android:textStyle="bold"
+                        android:letterSpacing="1.5"
+                        android:maxLength="6"
+                        android:paddingStart="@dimen/_10dp"
+                        android:paddingEnd="@dimen/_10dp"
+                        android:singleLine="true"
+                        android:text="@={viewModel.resendOtp}"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_20sp"
+                        tools:ignore="HardcodedText,RtlSymmetry,TouchTargetSizeCheck" />
+
+
+                </RelativeLayout>
+
+              <!--  <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/myProgressBar"
+                    android:layout_width="@dimen/_80dp"
+                    android:layout_height="@dimen/_80dp"
+                    app:lottie_autoPlay="true"
+                    android:layout_marginTop="@dimen/_40dp"
+                    android:layout_below="@+id/inputMobileNumber"
+                    android:layout_centerHorizontal="true"
+                    app:lottie_loop="true"
+                    android:visibility="visible"/>
+-->
+                <View
+                    android:id="@+id/view_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/inputMobileNumber"
+                    android:background="#D9D9D9" />
+
+                <LinearLayout
+                    android:id="@+id/bottomView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textview_login"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_20dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/didn_t_receive_code"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_16sp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textSignup"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:onClick="@{()-> viewModel.navigator.resend()}"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_20dp"
+                        android:text="@string/txt_resend_otp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_16sp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtTimer"
+                        android:layout_marginStart="@dimen/_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_20dp"
+                        android:text="00:00"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_16sp" />
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textview_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/_30dp"
+                    android:background="@drawable/t_back_square_btn_orange"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="@string/text_next"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_18sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

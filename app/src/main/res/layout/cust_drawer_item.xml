@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="context"
+            type="android.content.Context" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llDrawerItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/_15sdp">
+
+        <TextView
+            style="@style/text_semibold"
+            android:id="@+id/cdi_tvItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="items"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp" />
+
+    </LinearLayout>
+</layout>

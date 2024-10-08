@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.showfadriverletest.fragment.viewmodel.UpcomingTripViewModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.UpcomingFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcomingRv"
+            tools:listitem="@layout/item_upcoming_trip"
+            tools:itemCount="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvNoDataFound"
+        android:layout_gravity="center"
+        android:text="@string/no_data_found"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/_20dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/theme_color"
+        android:visibility="gone"
+        android:layout_height="@dimen/_45dp"
+        tools:ignore="RtlCompat" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_shodow">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_chart_marker"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:elevation="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:text="0000000"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_3sdp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
